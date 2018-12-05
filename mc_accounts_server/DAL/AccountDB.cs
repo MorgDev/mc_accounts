@@ -21,7 +21,7 @@ namespace mc_accounts_server.DAL
             }
             catch (LiteException ex)
             {
-                Logger.WriteLog(Logger.LogLevel.ERROR, string.Format("Could not create account for identifier {0}: #{1} - {2}. Help: {3}", account.Identifier, ex.ErrorCode, ex.Message, ex.HelpLink));
+                Logger.WriteLog(Logger.LogLevel.ERROR, string.Format("Could not create account for identifier {0}: #{1} - {2}. Help: {3}", account.Identifier, ex.ErrorCode, ex.Message, ex.HelpLink), "red");
                 return false;
             }
         }
@@ -40,7 +40,7 @@ namespace mc_accounts_server.DAL
             }
             catch (LiteException ex)
             {
-                Logger.WriteLog(Logger.LogLevel.ERROR, string.Format("Could not run find for identifier {0}: #{1} - {2}. Help: {3}", identifier, ex.ErrorCode, ex.Message, ex.HelpLink));
+                Logger.WriteLog(Logger.LogLevel.ERROR, string.Format("Could not run find for identifier {0}: #{1} - {2}. Help: {3}", identifier, ex.ErrorCode, ex.Message, ex.HelpLink), "red");
                 return false;
             }
         }
@@ -61,7 +61,7 @@ namespace mc_accounts_server.DAL
             }
             catch (LiteException ex)
             {
-                Logger.WriteLog(Logger.LogLevel.ERROR, string.Format("Could not run find for identifier {0}: #{1} - {2}. Help: {3}", identifier, ex.ErrorCode, ex.Message, ex.HelpLink));
+                Logger.WriteLog(Logger.LogLevel.ERROR, string.Format("Could not run find for identifier {0}: #{1} - {2}. Help: {3}", identifier, ex.ErrorCode, ex.Message, ex.HelpLink), "red");
                 return "No account found.";
             }
         }
@@ -86,7 +86,7 @@ namespace mc_accounts_server.DAL
             }
             catch (LiteException ex)
             {
-                Logger.WriteLog(Logger.LogLevel.ERROR, string.Format("Could not update password for identifier {0}: #{1} - {2}. Help: {3}", identifier, ex.ErrorCode, ex.Message, ex.HelpLink));
+                Logger.WriteLog(Logger.LogLevel.ERROR, string.Format("Could not update password for identifier {0}: #{1} - {2}. Help: {3}", identifier, ex.ErrorCode, ex.Message, ex.HelpLink), "red");
                 return false;
             }
         }
@@ -106,7 +106,7 @@ namespace mc_accounts_server.DAL
             }
             catch (LiteException ex)
             {
-                Logger.WriteLog(Logger.LogLevel.ERROR, string.Format("Could not delete account for identifier {0}: #{1} - {2}. Help: {3}", identifier, ex.ErrorCode, ex.Message, ex.HelpLink));
+                Logger.WriteLog(Logger.LogLevel.ERROR, string.Format("Could not delete account for identifier {0}: #{1} - {2}. Help: {3}", identifier, ex.ErrorCode, ex.Message, ex.HelpLink), "red");
                 return false;
             }
         }
