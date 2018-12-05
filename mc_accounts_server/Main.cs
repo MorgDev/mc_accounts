@@ -18,7 +18,7 @@ namespace mc_accounts_server
             Exports.Add("findAccount", new Func<string, bool>(OnFindAccount));
             Exports.Add("getPassword", new Func<string, string>(OnGetPassword));
             Exports.Add("updatePassword", new Func<string, string, bool>(OnUpdatePassword));
-            Exports.Add("deletePassword", new Func<string, bool>(OnDeleteAccount));
+            Exports.Add("deleteAccount", new Func<string, bool>(OnDeleteAccount));
         }
 
         public bool OnCreateAccount(string username, string password, string identifier)
